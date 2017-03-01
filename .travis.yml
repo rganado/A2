@@ -11,8 +11,8 @@ after_success:
 
 deploy:
   provider: s3
-  access_key_id: AKIAJULQTGCTVH53SMOQ
-  secret_access_key: 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
+  access_key_id: 
+  secret_access_key: 
   bucket: a2-proofguru
   skip_cleanup: true
   local-dir: src/amazonS3
