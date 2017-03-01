@@ -13,8 +13,7 @@ deploy:
   provider: s3
   access_key_id: AKIAJULQTGCTVH53SMOQ
   secret_access_key: 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
-  bucket: proofguru-bucket
-  endpoint: http://proofguru-bucket.s3-website-us-east-1.amazonaws.com
+  bucket: a2-proofguru
   skip_cleanup: true
   local-dir: src/amazonS3
   region: us-east-1
