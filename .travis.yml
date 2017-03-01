@@ -1,0 +1,20 @@
+language: java
+
+jdk:
+    - oraclejdk8
+
+script:
+    - mvn cobertura:cobertura
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t 415fa45f-a930-4e63-9ee8-acc3c3e9ed5f
+
+deploy:
+  provider: s3
+  access_key_id: AKIAILD7X5YDN4CCBDQQ
+  secret_access_key: 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
+  bucket: proofguru-bucket
+  endpoint: http://proofguru-bucket.s3-website-us-east-1.amazonaws.com
+  skip_cleanup: true
+  local-dir: src/amazonS3
+  region: us-east-1
